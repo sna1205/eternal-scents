@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Oud Royale",
+    "brand": "Maison Noir",
+    "description": "A sophisticated blend of rare oud wood, amber, and dark spices. This opulent fragrance embodies timeless luxury with warm, resinous notes that linger throughout the day.",
+    "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&q=80",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 45 },
+      { "label": "20ml", "price": 85 },
+      { "label": "30ml", "price": 120 },
+      { "label": "100ml", "price": 350 },
+      { "label": "Full Box", "price": 480 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Velvet Rose",
+    "brand": "L'Atelier Paris",
+    "description": "An elegant bouquet of Turkish rose, jasmine sambac, and white musk. Delicate yet captivating, this feminine scent evokes the romance of Parisian gardens in spring.",
+    "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?w=800&q=80",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 52 },
+      { "label": "20ml", "price": 95 },
+      { "label": "30ml", "price": 135 },
+      { "label": "100ml", "price": 380 },
+      { "label": "Full Box", "price": 520 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mystic Amber",
+    "brand": "Arabian Nights",
+    "description": "A mesmerizing oriental fragrance featuring rich amber, sandalwood, and vanilla. Warm and sensual, perfect for evening wear with exceptional longevity.",
+    "image": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 38 },
+      { "label": "20ml", "price": 72 },
+      { "label": "30ml", "price": 105 },
+      { "label": "100ml", "price": 295 },
+      { "label": "Full Box", "price": 410 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Ocean Breeze",
+    "brand": "Coastal Essence",
+    "description": "Fresh aquatic notes combined with bergamot, sea salt, and driftwood. A crisp, clean fragrance that captures the essence of Mediterranean shores.",
+    "image": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=800&q=80",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 42 },
+      { "label": "20ml", "price": 80 },
+      { "label": "30ml", "price": 115 },
+      { "label": "100ml", "price": 320 },
+      { "label": "Full Box", "price": 450 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Leather & Tobacco",
+    "brand": "Heritage House",
+    "description": "Bold and masculine with notes of Italian leather, dark tobacco, and cedarwood. A distinguished fragrance for the modern gentleman with refined taste.",
+    "image": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?w=800&q=80",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 48 },
+      { "label": "20ml", "price": 88 },
+      { "label": "30ml", "price": 128 },
+      { "label": "100ml", "price": 365 },
+      { "label": "Full Box", "price": 495 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Citrus Garden",
+    "brand": "Summer Dreams",
+    "description": "Vibrant blend of Sicilian lemon, grapefruit, and neroli with a base of white tea. Refreshing and uplifting, perfect for daytime wear in any season.",
+    "image": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800&q=80",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 40 },
+      { "label": "20ml", "price": 75 },
+      { "label": "30ml", "price": 110 },
+      { "label": "100ml", "price": 305 },
+      { "label": "Full Box", "price": 425 }
+    ]
+  }
+]
