@@ -1,92 +1,465 @@
 [
   {
     "id": 1,
-    "name": "Oud Royale",
-    "brand": "Maison Noir",
-    "description": "A sophisticated blend of rare oud wood, amber, and dark spices. This opulent fragrance embodies timeless luxury with warm, resinous notes that linger throughout the day.",
-    "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&q=80",
+    "name": "Yara Pink",
+    "brand": "Lattafa",
+    "description": "A sweet and creamy feminine fragrance with soft vanilla and fruity notes.",
+    "image": "/public/images/yara-pink.jpg",
     "hasFreeDelivery": true,
     "sizes": [
-      { "label": "10ml", "price": 45 },
-      { "label": "20ml", "price": 85 },
-      { "label": "30ml", "price": 120 },
-      { "label": "100ml", "price": 350 },
-      { "label": "Full Box", "price": 480 }
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 11 },
+      { "label": "30ml", "price": 15 }
     ]
   },
   {
     "id": 2,
-    "name": "Velvet Rose",
-    "brand": "L'Atelier Paris",
-    "description": "An elegant bouquet of Turkish rose, jasmine sambac, and white musk. Delicate yet captivating, this feminine scent evokes the romance of Parisian gardens in spring.",
-    "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?w=800&q=80",
+    "name": "Asad Bourbon",
+    "brand": "Lattafa",
+    "description": "A warm spicy fragrance with bourbon vanilla and woody accords.",
+    "image": "/public/images/asad-bourbon.jpg",
     "hasFreeDelivery": true,
     "sizes": [
-      { "label": "10ml", "price": 52 },
-      { "label": "20ml", "price": 95 },
-      { "label": "30ml", "price": 135 },
-      { "label": "100ml", "price": 380 },
-      { "label": "Full Box", "price": 520 }
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 18 }
     ]
   },
   {
     "id": 3,
-    "name": "Mystic Amber",
-    "brand": "Arabian Nights",
-    "description": "A mesmerizing oriental fragrance featuring rich amber, sandalwood, and vanilla. Warm and sensual, perfect for evening wear with exceptional longevity.",
-    "image": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80",
-    "hasFreeDelivery": false,
+    "name": "Club De Nuit Women",
+    "brand": "Armaf",
+    "description": "A floral fruity scent with fresh citrus and elegant rose notes.",
+    "image": "/public/images/club-de-nuit-women.jpg",
+    "hasFreeDelivery": true,
     "sizes": [
-      { "label": "10ml", "price": 38 },
-      { "label": "20ml", "price": 72 },
-      { "label": "30ml", "price": 105 },
-      { "label": "100ml", "price": 295 },
-      { "label": "Full Box", "price": 410 }
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 11 },
+      { "label": "30ml", "price": 15 }
     ]
   },
   {
     "id": 4,
-    "name": "Ocean Breeze",
-    "brand": "Coastal Essence",
-    "description": "Fresh aquatic notes combined with bergamot, sea salt, and driftwood. A crisp, clean fragrance that captures the essence of Mediterranean shores.",
-    "image": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=800&q=80",
+    "name": "Club De Nuit Intense",
+    "brand": "Armaf",
+    "description": "A bold smoky citrus fragrance with woody musky dry down.",
+    "image": "/public/images/club-de-nuit-intense.jpg",
     "hasFreeDelivery": true,
     "sizes": [
-      { "label": "10ml", "price": 42 },
-      { "label": "20ml", "price": 80 },
-      { "label": "30ml", "price": 115 },
-      { "label": "100ml", "price": 320 },
-      { "label": "Full Box", "price": 450 }
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 18 }
     ]
   },
   {
     "id": 5,
-    "name": "Leather & Tobacco",
-    "brand": "Heritage House",
-    "description": "Bold and masculine with notes of Italian leather, dark tobacco, and cedarwood. A distinguished fragrance for the modern gentleman with refined taste.",
-    "image": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?w=800&q=80",
-    "hasFreeDelivery": false,
+    "name": "Asad Elixir",
+    "brand": "Lattafa",
+    "description": "An intense oriental fragrance with sweet and woody richness.",
+    "image": "/public/images/asad-elixir.jpg",
+    "hasFreeDelivery": true,
     "sizes": [
-      { "label": "10ml", "price": 48 },
-      { "label": "20ml", "price": 88 },
-      { "label": "30ml", "price": 128 },
-      { "label": "100ml", "price": 365 },
-      { "label": "Full Box", "price": 495 }
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 18 }
     ]
   },
   {
     "id": 6,
-    "name": "Citrus Garden",
-    "brand": "Summer Dreams",
-    "description": "Vibrant blend of Sicilian lemon, grapefruit, and neroli with a base of white tea. Refreshing and uplifting, perfect for daytime wear in any season.",
-    "image": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800&q=80",
+    "name": "Khamrah Qahwa",
+    "brand": "Lattafa",
+    "description": "A gourmand blend of coffee, cinnamon, and vanilla.",
+    "image": "/public/images/khamrah-qahwa.jpg",
     "hasFreeDelivery": true,
     "sizes": [
-      { "label": "10ml", "price": 40 },
-      { "label": "20ml", "price": 75 },
-      { "label": "30ml", "price": 110 },
-      { "label": "100ml", "price": 305 },
-      { "label": "Full Box", "price": 425 }
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 18 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "9PM",
+    "brand": "Afnan",
+    "description": "A sweet evening fragrance with apple, vanilla and tonka bean.",
+    "image": "/public/images/9pm.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 11 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Ventana Pour Homme",
+    "brand": "Armaf",
+    "description": "A fresh aromatic masculine scent with citrus and woody notes.",
+    "image": "/public/images/ventana.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 11 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Fakhar Black",
+    "brand": "Lattafa",
+    "description": "A modern aromatic fragrance with apple and tonka sweetness.",
+    "image": "/public/images/fakhar-black.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 11 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+
+  {
+    "id": 10,
+    "name": "Island Dream",
+    "brand": "Risala",
+    "description": "A tropical aquatic fragrance with fresh fruity vibes.",
+    "image": "/public/images/island-dream.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "100ml", "price": 35 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Liquid Brun",
+    "brand": "French Avenue",
+    "description": "A warm caramelized sweet fragrance with woody depth.",
+    "image": "/public/images/liquid-brun.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 8 },
+      { "label": "100ml", "price": 45 }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Atlantis Extrait",
+    "brand": "Risala",
+    "description": "A deep aquatic and woody extrait fragrance.",
+    "image": "/public/images/atlantis-extrait.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 8 },
+      { "label": "100ml", "price": 45 }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "9PM Elixir",
+    "brand": "Afnan",
+    "description": "A richer, deeper version of 9PM with intense sweetness.",
+    "image": "/public/images/9pm-elixir.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 12 },
+      { "label": "30ml", "price": 16 }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Stronger With You Intensely",
+    "brand": "Emporio Armani",
+    "description": "A powerful blend of vanilla, cinnamon and amber.",
+    "image": "/public/images/stronger-with-you.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 13 },
+      { "label": "20ml", "price": 25 },
+      { "label": "30ml", "price": 36 }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Optimystic Her",
+    "brand": "Fragrance World",
+    "description": "A soft floral fruity feminine fragrance.",
+    "image": "/public/images/optimystic-her.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "100ml", "price": 36 }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Hawas Ice",
+    "brand": "Rasasi",
+    "description": "A fresh aquatic scent perfect for warm weather.",
+    "image": "/public/images/hawas-ice.jpg",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 8 },
+      { "label": "20ml", "price": 15 },
+      { "label": "30ml", "price": 22 }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Burberry Her Petals",
+    "brand": "Burberry",
+    "description": "A delicate fruity floral fragrance with red berries.",
+    "image": "/public/images/burberry-her-petals.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 15 },
+      { "label": "20ml", "price": 29 },
+      { "label": "30ml", "price": 42 }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Zenith Blue",
+    "brand": "Maison Alhambra",
+    "description": "A fresh blue fragrance with citrus and woody notes.",
+    "image": "/public/images/zenith-blue.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "100ml", "price": 39 }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Vulcan Baie",
+    "brand": "French Avenue",
+    "description": "A vibrant fruity-floral fragrance with sweet tropical accords and soft musky undertones. Bright, playful, and long-lasting.",
+    "image": "/public/images/vulcan-baie.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 8 },
+      { "label": "20ml", "price": 15 },
+      { "label": "30ml", "price": 22 }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Vulcan FUE",
+    "brand": "French Avenue",
+    "description": "A fresh aquatic fragrance with cool citrus notes and clean woody base. Smooth and refreshing.",
+    "image": "/public/images/vulcan-fue.jpg",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 8 },
+      { "label": "20ml", "price": 15 },
+      { "label": "30ml", "price": 22 }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Yara Candy",
+    "brand": "Lattafa",
+    "description": "A sweet gourmand scent with creamy vanilla, fruity candy accords, and soft musk. Feminine and addictive.",
+    "image": "/public/images/yara-candy.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 11 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Sedley",
+    "brand": "Parfums de Marly",
+    "description": "A refined fresh fragrance blending citrus, mint, lavender, and woody notes. Elegant and versatile.",
+    "image": "/public/images/sedley.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 10 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Just Aswad",
+    "brand": "Fragrance World",
+    "description": "A bold oriental fragrance with spicy top notes and deep amber-woody base. Rich and intense.",
+    "image": "/public/images/just-aswad.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 10 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Just Wardi",
+    "brand": "Fragrance World",
+    "description": "A soft floral fragrance with sweet rose and powdery musky undertones. Elegant and charming.",
+    "image": "/public/images/just-wardi.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 10 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "9AM Dive",
+    "brand": "Afnan",
+    "description": "A fresh aquatic scent with citrus splash and clean musky base. Energetic and perfect for daytime.",
+    "image": "/public/images/9am-dive.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 12 },
+      { "label": "30ml", "price": 16 }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Lattafa Khamrah",
+    "brand": "Lattafa",
+    "description": "A rich gourmand fragrance with cinnamon, vanilla, praline, and warm amber. Sweet, warm, and long-lasting.",
+    "image": "/public/images/lattafa-khamrah.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "100ml", "price": 35 }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Eau De Neige",
+    "brand": "Fragrance World",
+    "description": "A crisp and refreshing fragrance with cool aquatic notes and light woody base. Clean and uplifting.",
+    "image": "/public/images/eau-de-neige.jpg",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 11 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Urban Man",
+    "brand": "Fragrance World",
+    "description": "A modern masculine scent with fresh citrus opening and woody aromatic base. Bold and stylish.",
+    "image": "/public/images/urban-man.jpg",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 20 }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Proud Of You Absolute",
+    "brand": "Fragrance World",
+    "description": "A warm and sweet amber-vanilla fragrance with spicy undertones. Intense and romantic.",
+    "image": "/public/images/proud-of-you-absolute.jpg",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 20 }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "One Self",
+    "brand": "Fragrance World",
+    "description": "A sleek woody aromatic fragrance with clean citrus and musky base. Versatile and modern.",
+    "image": "/public/images/one-self.jpg",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 6 },
+      { "label": "20ml", "price": 10 },
+      { "label": "30ml", "price": 15 }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Memories of Summer",
+    "brand": "Fragrance World",
+    "description": "A bright citrus-fruity fragrance with warm golden undertones. Fresh, smooth, and uplifting.",
+    "image": "/public/images/memories-of-summer.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 19 }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Turathi Electric",
+    "brand": "Afnan",
+    "description": "A vibrant citrus-aromatic fragrance with fresh spicy notes and woody dry down. Energetic and classy.",
+    "image": "/public/images/turathi-electric.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 8 },
+      { "label": "20ml", "price": 14 },
+      { "label": "30ml", "price": 20 }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Ventana Marine",
+    "brand": "Armaf",
+    "description": "A refreshing marine fragrance with crisp citrus and aquatic accords. Clean and everyday friendly.",
+    "image": "/public/images/ventana-marine.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 16 }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Eternal Musk",
+    "brand": "Maison Alhambra",
+    "description": "A soft and elegant musky fragrance with powdery floral hints. Clean, subtle, and long-lasting.",
+    "image": "/public/images/eternal-musk.jpg",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 20 }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Hawas for Him",
+    "brand": "Rasasi",
+    "description": "A fresh aquatic fragrance with apple, citrus, and ambergris. Strong projection and great for warm weather.",
+    "image": "/public/images/hawas-for-him.jpg",
+    "hasFreeDelivery": false,
+    "sizes": [
+      { "label": "10ml", "price": 7 },
+      { "label": "20ml", "price": 13 },
+      { "label": "30ml", "price": 18 }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "YSL Y EDP",
+    "brand": "Yves Saint Laurent",
+    "description": "A modern aromatic fragrance with apple, sage, and tonka bean. Fresh, powerful, and long-lasting.",
+    "image": "/public/images/ysl-y-edp.jpg",
+    "hasFreeDelivery": true,
+    "sizes": [
+      { "label": "10ml", "price": 14 },
+      { "label": "20ml", "price": 27 },
+      { "label": "30ml", "price": 39 }
     ]
   }
 ]

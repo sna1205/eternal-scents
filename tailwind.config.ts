@@ -12,16 +12,16 @@ export default {
         'luxury-black': '#1a1a1a',
       },
       fontFamily: {
-        'serif': ['Playfair Display', 'Georgia', 'serif'],
-        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        sans: ['Manrope', 'Segoe UI', 'sans-serif'],
       },
       boxShadow: {
-        'luxury': '0 10px 40px rgba(212, 175, 55, 0.1)',
+        luxury: '0 10px 40px rgba(212, 175, 55, 0.1)',
         'luxury-lg': '0 20px 60px rgba(212, 175, 55, 0.2)',
       },
       animation: {
-        'fadeIn': 'fadeIn 0.3s ease-out',
-        'slideUp': 'slideUp 0.4s ease-out',
+        fadeIn: 'fadeIn 0.3s ease-out',
+        slideUp: 'slideUp 0.4s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -36,4 +36,4 @@ export default {
     },
   },
   plugins: [],
-}
+};

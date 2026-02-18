@@ -1,51 +1,56 @@
 import React from 'react';
-import { ShoppingBag, Truck } from 'lucide-react';
+import { ArrowRight, Truck } from 'lucide-react';
 
 const ProductCard = ({ perfume, onViewDetails }) => {
-  const startingPrice = Math.min(...perfume.sizes.map(s => s.price));
-  
+  const startingPrice = Math.min(...perfume.sizes.map((size) => size.price));
+  const hasFreeDeliverySize = perfume.sizes.some((size) => parseInt(size.label, 10) >= 20);
+  const sortedSizes = [...perfume.sizes].sort((a, b) => parseInt(a.label, 10) - parseInt(b.label, 10));
+
   return (
-    <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-      <div className="relative overflow-hidden h-64">
-        <img 
-          src={perfume.image} 
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-lg shadow-slate-200/40 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-rose-100/50">
+      <div className="relative h-60 overflow-hidden bg-[linear-gradient(145deg,#fdf2f8_0%,#fff7ed_100%)]">
+        <img
+          src={perfume.image}
           alt={perfume.name}
           loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
-        {perfume.hasFreeDelivery && (
-          <div className="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-lg">
-            <Truck size={14} />
-            Free Delivery
+
+        <div className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur">
+          {perfume.brand}
+        </div>
+
+        {hasFreeDeliverySize && (
+          <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-emerald-500 px-2.5 py-1 text-[10px] font-semibold text-white shadow-md">
+            <Truck size={12} />
+            Free 20ml+
           </div>
         )}
       </div>
-      
-      <div className="p-6">
-        <div className="text-xs uppercase tracking-wider text-amber-600 font-semibold mb-2">
-          {perfume.brand}
+
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="line-clamp-2 font-serif text-xl text-slate-900">{perfume.name}</h3>
+        <p className="mt-2 text-sm text-slate-500">Starting at</p>
+        <p className="text-3xl font-bold text-slate-900">${startingPrice}</p>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {sortedSizes.map((size) => (
+            <span key={`${perfume.id}-${size.label}`} className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600">
+              {size.label}
+            </span>
+          ))}
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-3">
-          {perfume.name}
-        </h3>
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <span className="text-sm text-gray-500">Starting from</span>
-            <div className="text-2xl font-bold text-gray-900">
-              ${startingPrice}
-            </div>
-          </div>
-        </div>
+
         <button
           onClick={() => onViewDetails(perfume)}
-          className="w-full bg-gray-900 text-white py-3 rounded-xl hover:bg-amber-600 transition-colors duration-300 font-semibold flex items-center justify-center gap-2"
+          className="mt-5 inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-rose-600"
           aria-label={`View details for ${perfume.name}`}
         >
-          <ShoppingBag size={18} />
-          View Details
+          View details
+          <ArrowRight size={16} />
         </button>
       </div>
-    </div>
+    </article>
   );
 };
 
