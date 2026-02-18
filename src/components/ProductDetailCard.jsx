@@ -17,9 +17,9 @@ const ProductDetailCard = ({ perfume }) => {
   const hasFreeDelivery = parseInt(selectedSize.label, 10) >= 20;
 
   return (
-    <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-slate-200/40">
+    <article className="overflow-hidden rounded-3xl border border-white/80 bg-white/80 shadow-[0_24px_80px_rgba(59,130,246,0.16)] backdrop-blur">
       <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
-        <div className="relative bg-[linear-gradient(150deg,#fdf2f8_0%,#fff7ed_100%)] p-6 sm:p-8">
+        <div className="relative bg-[linear-gradient(150deg,#ecfeff_0%,#fdf4ff_55%,#fff7ed_100%)] p-6 sm:p-8">
           <img src={perfume.image} alt={perfume.name} className="h-full max-h-[520px] w-full rounded-2xl object-cover object-top" />
           <button className="absolute right-10 top-10 rounded-full bg-white/90 p-2.5 text-slate-600 shadow-lg backdrop-blur transition hover:text-rose-500">
             <Heart size={20} />
@@ -28,7 +28,7 @@ const ProductDetailCard = ({ perfume }) => {
 
         <div className="p-6 sm:p-8">
           <div className="mb-5 flex items-center justify-between">
-            <span className="rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-rose-600">
+            <span className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">
               {perfume.brand}
             </span>
             <div className="flex items-center gap-1 text-amber-400">
@@ -51,8 +51,8 @@ const ProductDetailCard = ({ perfume }) => {
                   onClick={() => setSelectedSize(size)}
                   className={`rounded-xl border px-2 py-3 text-sm font-semibold transition sm:px-4 ${
                     selectedSize.label === size.label
-                      ? 'border-rose-500 bg-rose-500 text-white'
-                      : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-rose-200 hover:bg-rose-50'
+                      ? 'border-cyan-500 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white'
+                      : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-cyan-200 hover:bg-cyan-50'
                   }`}
                 >
                   {size.label}
@@ -63,10 +63,10 @@ const ProductDetailCard = ({ perfume }) => {
 
           <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Selected price</p>
-            <p className="mt-2 text-4xl font-bold text-slate-900">${selectedSize.price}</p>
+            <p className="mt-2 bg-gradient-to-r from-cyan-600 to-fuchsia-600 bg-clip-text text-4xl font-bold text-transparent">${selectedSize.price}</p>
             <p className="mt-1 text-sm text-slate-500">{selectedSize.label} bottle</p>
 
-            <button className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-rose-600">
+            <button className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-slate-900 to-cyan-900 px-4 py-3 text-sm font-semibold text-white transition hover:from-cyan-600 hover:to-fuchsia-600">
               <ShoppingCart size={18} />
               Add to cart
             </button>

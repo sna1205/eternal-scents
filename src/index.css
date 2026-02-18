@@ -7,6 +7,8 @@
 :root {
   --rose-soft: #ffe4e6;
   --slate-deep: #0f172a;
+  --cyan-pop: #06b6d4;
+  --fuchsia-pop: #d946ef;
 }
 
 @layer base {
@@ -16,7 +18,10 @@
 
   body {
     @apply font-sans text-slate-900;
-    background: radial-gradient(circle at top, #ffe4e6 0%, #fffaf4 35%, #f8fafc 100%);
+    background:
+      radial-gradient(circle at 12% 18%, rgba(6, 182, 212, 0.15), transparent 34%),
+      radial-gradient(circle at 88% 12%, rgba(217, 70, 239, 0.14), transparent 30%),
+      radial-gradient(circle at top, #dbeafe 0%, #fdf4ff 35%, #f8fafc 100%);
   }
 
   h1,
@@ -29,7 +34,7 @@
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-rose-400 ring-offset-2;
+    @apply outline-none ring-2 ring-cyan-400 ring-offset-2;
   }
 }
 
@@ -37,11 +42,27 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .card-pop {
+    animation: cardPop 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+}
+
+@keyframes cardPop {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #f43f5e #ffe4e6;
+  scrollbar-color: #06b6d4 #e0f2fe;
 }
 
 ::-webkit-scrollbar {
@@ -49,14 +70,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffe4e6;
+  background: #e0f2fe;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f43f5e;
+  background: linear-gradient(#06b6d4, #d946ef);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e11d48;
+  background: #0891b2;
 }

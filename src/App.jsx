@@ -40,6 +40,7 @@ const resolveImagePath = (path) => {
   const normalizedRelative = withoutPublic.replace(/^\/+/, '');
   return `${import.meta.env.BASE_URL}${normalizedRelative}`;
 };
+const trendTags = ['Fresh Picks', 'Night Out', 'Office Safe', 'Sweet'];
 
 function Catalog() {
   const navigate = useNavigate();
@@ -215,16 +216,16 @@ function Catalog() {
   ];
 
   const FilterPanel = (
-    <div className="rounded-3xl border border-rose-100 bg-white/95 p-5 shadow-xl shadow-rose-100/40 backdrop-blur">
+    <div className="rounded-3xl border border-white/70 bg-white/65 p-5 shadow-[0_20px_60px_rgba(14,165,233,0.14)] backdrop-blur-xl">
       <div className="mb-5 flex items-center justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-rose-400">Filters</p>
-          <h2 className="font-serif text-xl text-slate-900">Refine your picks</h2>
+          <p className="text-xs uppercase tracking-[0.25em] text-cyan-500">Filters</p>
+          <h2 className="font-serif text-xl text-slate-900">Tune your vibe</h2>
         </div>
         {hasActiveFilters && (
           <button
             onClick={clearFilters}
-            className="rounded-full border border-rose-200 px-3 py-1.5 text-xs font-semibold text-rose-600 transition hover:border-rose-300 hover:bg-rose-50"
+            className="rounded-full border border-cyan-200 px-3 py-1.5 text-xs font-semibold text-cyan-700 transition hover:border-cyan-300 hover:bg-cyan-50"
           >
             Reset all
           </button>
@@ -237,7 +238,7 @@ function Catalog() {
           <select
             value={sortBy}
             onChange={(event) => setSortBy(event.target.value)}
-            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 focus:border-rose-400 focus:outline-none"
+            className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-cyan-400 focus:outline-none"
           >
             <option value="featured">Featured</option>
             <option value="price-low">Price: low to high</option>
@@ -249,7 +250,7 @@ function Catalog() {
 
         <div>
           <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Price range</label>
-          <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
+          <div className="rounded-xl border border-slate-200 bg-white p-3">
             <div className="mb-3 grid grid-cols-2 gap-2">
               <label className="text-xs font-semibold text-slate-500">
                 Min
@@ -259,7 +260,7 @@ function Catalog() {
                   max={priceRange[1]}
                   value={priceRange[0]}
                   onChange={(event) => updateMinPrice(Number(event.target.value) || minPrice)}
-                  className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-2.5 py-2 text-sm text-slate-700 focus:border-rose-400 focus:outline-none"
+                  className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 text-sm text-slate-700 focus:border-cyan-400 focus:outline-none"
                 />
               </label>
               <label className="text-xs font-semibold text-slate-500">
@@ -270,7 +271,7 @@ function Catalog() {
                   max={maxPrice}
                   value={priceRange[1]}
                   onChange={(event) => updateMaxPrice(Number(event.target.value) || maxPrice)}
-                  className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-2.5 py-2 text-sm text-slate-700 focus:border-rose-400 focus:outline-none"
+                  className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 text-sm text-slate-700 focus:border-cyan-400 focus:outline-none"
                 />
               </label>
             </div>
@@ -283,8 +284,8 @@ function Catalog() {
                     onClick={() => applyPricePreset(preset.range)}
                     className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold transition ${
                       isActive
-                        ? 'border-rose-500 bg-rose-500 text-white'
-                        : 'border-slate-200 bg-white text-slate-600 hover:border-rose-200 hover:bg-rose-50'
+                        ? 'border-cyan-500 bg-cyan-500 text-white'
+                        : 'border-slate-200 bg-white text-slate-600 hover:border-cyan-200 hover:bg-cyan-50'
                     }`}
                   >
                     {preset.label}
@@ -304,8 +305,8 @@ function Catalog() {
                 onClick={() => toggleBrand(brand)}
                 className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
                   selectedBrands.includes(brand)
-                    ? 'border-rose-500 bg-rose-500 text-white'
-                    : 'border-slate-200 bg-white text-slate-600 hover:border-rose-200 hover:bg-rose-50'
+                    ? 'border-fuchsia-500 bg-fuchsia-500 text-white'
+                    : 'border-slate-200 bg-white text-slate-600 hover:border-fuchsia-200 hover:bg-fuchsia-50'
                 }`}
               >
                 {brand}
@@ -333,12 +334,12 @@ function Catalog() {
           </div>
         </div>
 
-        <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3">
+        <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 bg-white p-3">
           <input
             type="checkbox"
             checked={freeDeliveryOnly}
             onChange={(event) => setFreeDeliveryOnly(event.target.checked)}
-            className="h-4 w-4 rounded border-slate-300 text-rose-500 focus:ring-rose-400"
+            className="h-4 w-4 rounded border-slate-300 text-cyan-500 focus:ring-cyan-400"
           />
           <div>
             <p className="text-sm font-semibold text-slate-700">Free delivery only</p>
@@ -351,7 +352,7 @@ function Catalog() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6 lg:px-8">
-      <div className="mb-8 rounded-3xl border border-rose-100 bg-white/80 p-4 shadow-lg shadow-rose-100/30 backdrop-blur sm:p-5">
+      <div className="mb-8 rounded-3xl border border-white/80 bg-white/70 p-4 shadow-[0_25px_80px_rgba(168,85,247,0.12)] backdrop-blur-xl sm:p-5">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="relative w-full lg:max-w-xl">
             <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
@@ -360,19 +361,19 @@ function Catalog() {
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
               placeholder="Search perfume name or brand"
-              className="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-10 pr-4 text-sm text-slate-700 outline-none transition focus:border-rose-400"
+              className="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-10 pr-4 text-sm text-slate-700 outline-none transition focus:border-cyan-400"
             />
           </div>
 
           <div className="flex items-center gap-2">
             <button
               onClick={() => setShowMobileFilters((prev) => !prev)}
-              className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-rose-200 hover:bg-rose-50 lg:hidden"
+              className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-cyan-200 hover:bg-cyan-50 lg:hidden"
             >
               <SlidersHorizontal size={16} />
               Filters
               {activeFilterCount > 0 && (
-                <span className="rounded-full bg-rose-500 px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
+                <span className="rounded-full bg-cyan-500 px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
               )}
             </button>
 
@@ -388,13 +389,21 @@ function Catalog() {
           </div>
         </div>
 
+        <div className="mt-1 flex flex-wrap gap-2">
+          {trendTags.map((tag) => (
+            <span key={tag} className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold text-slate-600">
+              {tag}
+            </span>
+          ))}
+        </div>
+
         {activeFilterChips.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {activeFilterChips.map((chip) => (
               <button
                 key={chip.id}
                 onClick={chip.onRemove}
-                className="inline-flex items-center gap-1 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700 transition hover:bg-rose-100"
+                className="inline-flex items-center gap-1 rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-700 transition hover:bg-cyan-100"
               >
                 {chip.label}
                 <X size={12} />
@@ -412,10 +421,10 @@ function Catalog() {
         <section>
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-rose-500">Catalog</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan-500">Catalog</p>
               <h2 className="font-serif text-2xl text-slate-900">{totalProducts} fragrances found</h2>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-fuchsia-500 px-3 py-1.5 text-xs font-semibold text-white">
               <Sparkles size={14} />
               Free delivery on 20ml+
             </div>
@@ -423,9 +432,10 @@ function Catalog() {
 
           {currentProducts.length > 0 ? (
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-              {currentProducts.map((perfume) => (
+              {currentProducts.map((perfume, index) => (
                 <ProductCard
                   key={perfume.id}
+                  index={index}
                   perfume={perfume}
                   onViewDetails={() => navigate(`/product/${perfume.id}`)}
                 />
@@ -524,7 +534,7 @@ function App() {
   const isProductDetailPage = location.pathname.startsWith('/product/');
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#ffe4e6_0%,#fffaf4_36%,#f8fafc_100%)] text-slate-900">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,#dbeafe_0%,#fdf4ff_35%,#f8fafc_100%)] text-slate-900">
       {!isProductDetailPage && <Hero />}
 
       <Routes>
