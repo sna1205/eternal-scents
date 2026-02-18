@@ -31,6 +31,15 @@ const pricePresets = [
 ];
 
 const isFreeDeliverySize = (sizeLabel) => parseInt(sizeLabel, 10) >= 20;
+const logoSrc = `${import.meta.env.BASE_URL}images/logo.jpg`;
+const resolveImagePath = (path) => {
+  if (!path) return path;
+  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) return path;
+
+  const withoutPublic = path.replace(/^\/?public\//, '');
+  const normalizedRelative = withoutPublic.replace(/^\/+/, '');
+  return `${import.meta.env.BASE_URL}${normalizedRelative}`;
+};
 
 function Catalog() {
   const navigate = useNavigate();
@@ -43,9 +52,17 @@ function Catalog() {
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
   const [freeDeliveryOnly, setFreeDeliveryOnly] = useState(false);
   const [sortBy, setSortBy] = useState('featured');
+  const catalogPerfumes = useMemo(
+    () =>
+      perfumesData.map((perfume) => ({
+        ...perfume,
+        image: resolveImagePath(perfume.image),
+      })),
+    []
+  );
 
   const filteredAndSortedProducts = useMemo(() => {
-    const filtered = perfumesData.filter((perfume) => {
+    const filtered = catalogPerfumes.filter((perfume) => {
       const lowerQuery = searchQuery.trim().toLowerCase();
       if (lowerQuery) {
         const matchesName = perfume.name.toLowerCase().includes(lowerQuery);
@@ -102,7 +119,7 @@ function Catalog() {
     });
 
     return sorted;
-  }, [searchQuery, selectedBrands, selectedSizes, priceRange, freeDeliveryOnly, sortBy]);
+  }, [catalogPerfumes, searchQuery, selectedBrands, selectedSizes, priceRange, freeDeliveryOnly, sortBy]);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -467,7 +484,12 @@ function Catalog() {
 function ProductDetail() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const perfume = perfumesData.find((product) => product.id.toString() === id);
+  const perfume = perfumesData
+    .map((product) => ({
+      ...product,
+      image: resolveImagePath(product.image),
+    }))
+    .find((product) => product.id.toString() === id);
 
   if (!perfume) {
     return (
@@ -513,7 +535,7 @@ function App() {
       <footer className="border-t border-rose-100 bg-white/80 px-6 py-10 backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 text-center text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <div className="flex items-center justify-center gap-3 sm:justify-start">
-            <img src="/images/logo.jpg" alt="Eternal Scents logo" className="h-10 w-10 rounded-lg object-cover" />
+            <img src={logoSrc} alt="Eternal Scents logo" className="h-10 w-10 rounded-lg object-cover" />
             <p className="font-serif text-lg text-slate-800">Eternal Scents</p>
           </div>
           <p>Catalog display only. Contact us for orders.</p>

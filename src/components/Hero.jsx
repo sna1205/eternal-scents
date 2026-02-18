@@ -1,5 +1,7 @@
 import React from 'react';
 
+const logoSrc = `${import.meta.env.BASE_URL}images/logo.jpg`;
+
 const Hero = () => {
   return (
     <section className="relative overflow-hidden border-b border-rose-100 bg-[linear-gradient(110deg,#0f172a_0%,#1e293b_45%,#0f172a_100%)] px-6 pb-16 pt-14 text-white">
@@ -9,7 +11,7 @@ const Hero = () => {
       <div className="relative mx-auto max-w-7xl">
         <div className="mb-5 inline-flex items-center gap-3 rounded-2xl border border-white/15 bg-black/20 px-3 py-2 backdrop-blur">
           <img
-            src="/images/logo.jpg"
+            src={logoSrc}
             alt="Eternal Scents logo"
             className="h-10 w-10 rounded-lg object-cover ring-1 ring-white/20"
           />
